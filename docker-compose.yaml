@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  forwarding-service:
+    build: .
+    volumes:
+      - ./config.ini:/app/config.ini  # Mount the config file into the container
+    network_mode: host
